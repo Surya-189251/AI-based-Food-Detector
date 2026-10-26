@@ -1,0 +1,58 @@
+# =====================================================================
+# FreshCheck AI — git-ignore patterns
+# Rename this file to .gitignore at your project root.
+# =====================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Environment variables (never commit secrets)
+backend/.env
+frontend/.env
+
+# ML — trained model weights (large binary files)
+# If you want to version your model, use Git LFS instead
+backend/saved_models/*.keras
+backend/saved_models/*.h5
+
+# Dataset (too large for version control)
+backend/ml/dataset/
+
+# Evaluation outputs
+backend/ml/evaluation/results/
+
+# Uploaded images (user data — not for version control)
+backend/data/uploads/
+backend/data/db/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+uvicorn.log
